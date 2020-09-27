@@ -7,7 +7,7 @@ const carNumber = async (number) => {
   try {
     browser = await puppeteer.launch({
       args: ["--no-sandbox"],
-      headless: false,
+      headless: true,
     });
     const page = await browser.newPage();
     await page.setDefaultNavigationTimeout(0);
